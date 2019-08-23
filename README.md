@@ -6,7 +6,7 @@ Creates an ansible inventory base on Eureka registered hosts.
 
 Just install using:
 ```
-pip install git+ssh://git@github.com/padilo/eureka-ansible-inventory.git
+pip install git+ssh://git@github.com/aaronrl/eureka-ansible-inventory.git
 ```
 # How to use
 
