@@ -13,6 +13,6 @@ def get_me():
 
     shutil.copyfile(script_file, script_tmp_file)
 
-    os.chmod(script_tmp_file, 0777)
+    os.chmod(script_tmp_file, 0o7770o777)
 
     print(script_tmp_file)
