@@ -10,7 +10,7 @@ setup(
     author='Pablo Diaz',
     author_email='padilo@gmail.com',
     version='0.1',
-    install_requires=['simplejson', 'unirest', 'click'],
+    install_requires=['simplejson', 'requests', 'click'],
     packages=['app'],
     entry_points={
         'console_scripts': [

@@ -9,7 +9,7 @@ import traceback
 from itertools import chain, imap, ifilter
 
 import click
-import unirest
+import requests 
 
 
 def iflatmap(f, items):
@@ -28,9 +28,9 @@ def _get_eureka_url():
 def _request_eureka_inventory():
     url = _get_eureka_url()
 
-    response = unirest.get(url, headers={"Accept": "application/json"})
+    response = requests.get(url, headers={"Accept": "application/json"})
 
-    return response.body["applications"]["application"]
+    return response.json()["applications"]["application"]
 
 
 def _is_hostname(hostname):
