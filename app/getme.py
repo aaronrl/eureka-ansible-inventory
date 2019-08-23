@@ -8,11 +8,11 @@ def _get_me_path():
 
 
 def get_me():
-    script_file = "{}/cli.py".format(_get_me_path())
+    script_file = "{}/cli.py".format(_get_me_path())octal
     script_tmp_file = "/tmp/eureka_inventory.py"
 
     shutil.copyfile(script_file, script_tmp_file)
 
-    os.chmod(script_tmp_file, 0o7770o777)
+    os.chmod(script_tmp_file, 0o777)
 
     print(script_tmp_file)
