@@ -6,14 +6,14 @@ import json
 import os
 import sys
 import traceback
-from itertools import chain, imap, ifilter
+from itertools import chain, ifilter
 
 import click
 import requests 
 
 
 def iflatmap(f, items):
-    return chain.from_iterable(imap(f, items))
+    return chain.from_iterable(map(f, items))
 
 
 def _get_eureka_url():
