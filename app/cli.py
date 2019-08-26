@@ -6,7 +6,7 @@ import json
 import os
 import sys
 import traceback
-from itertools import chain, ifilter
+from itertools import chain
 
 import click
 import requests 
@@ -83,7 +83,7 @@ def _list_cli():
 def _host_cli(hostname):
     hosts = iflatmap(lambda item: item.get("instance", {}), _request_eureka_inventory())
 
-    host_info = next(ifilter(_is_hostname(hostname), hosts), {})
+    host_info = next(filter(_is_hostname(hostname), hosts), {})
 
     print(json.dumps(host_info, indent=2))
 
